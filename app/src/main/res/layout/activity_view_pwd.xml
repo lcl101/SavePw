@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#6b6b6b"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#4b4b4b">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  添 加  "
+            android:textSize="65px"
+            android:id="@+id/btViewAdd"
+            />
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  保  存  "
+            android:textSize="65px"
+            android:id="@+id/btViewSave"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lvViewList"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
