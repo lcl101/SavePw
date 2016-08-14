@@ -14,6 +14,16 @@ public class EnDemo extends Bean {
         enStr = str;
     }
 
+    public boolean checkEnKey(){
+        if (null == enStr || "".equals(enStr)){
+            return true;
+        }
+        if (Config.encryBean.en(DEMO).equals(enStr)){
+            return true;
+        }
+        return false;
+    }
+
     public String data(){
         if (null == enStr||"".equals(enStr)){
             enStr = Config.encryBean.en(DEMO);

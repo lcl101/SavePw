@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.aoki.savepw.MainActivity"
-    android:background="#6b6b6b"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="请输入密码:"
-        android:textSize="65px"
-        android:id="@+id/vtLoginPw"
-        android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_main">
 
-    <EditText
-        android:layout_width="wrap_content"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/itLoginPw"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/vtLoginPw"
-        android:layout_centerHorizontal="true" />
+        android:padding="15dip"
+        android:layout_margin="15dip"
+        android:background="@drawable/background_main_div"
+        tools:context="com.aoki.savepw.MainActivity"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="请输入密码:"
+            android:textSize="65px"
+            android:id="@+id/vtLoginPw"
+            android:layout_marginTop="49dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="  确  定  "
-        android:textSize="65px"
-        android:id="@+id/btLoginOk"
-        android:layout_below="@+id/itLoginPw"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp" />
-</RelativeLayout>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/itLoginPw"
+            android:layout_marginTop="31dp"
+            android:layout_below="@+id/vtLoginPw"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  确  定  "
+            android:textSize="65px"
+            android:id="@+id/btLoginOk"
+            android:layout_below="@+id/itLoginPw"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/background_button"/>
+    </RelativeLayout>
+
+</LinearLayout>

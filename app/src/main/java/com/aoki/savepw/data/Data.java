@@ -15,6 +15,7 @@ public class Data {
     private static FileVersion fv = new FileVersion();
     private static EnDemo ed = new EnDemo();
     private static List<Password> pwds = new ArrayList<Password>(10);
+    private static List<Password> oldPwds = null;
 
     public static List<Password> getPwds(){
         return pwds;
@@ -37,10 +38,14 @@ public class Data {
 
     private static void check(Password p){
         for (Password ep : pwds){
-            if (p.getDeDesc().equals(ep.getDeDesc())){
+            if (p.getDesc().equals(ep.getDesc())){
                 throw new BizzException(ErrorCode.getErrorCode("data","add"));
             }
         }
+    }
+
+    public static boolean checkEnKey(){
+        return ed.checkEnKey();
     }
 
     public static void remove(Password p){
@@ -49,7 +54,7 @@ public class Data {
     }
 
     public static List<String> getData(){
-        if (!modify) return null;
+//        if (!modify) return null;
         List<String> d = new ArrayList<String>(15);
         d.add(av.toString()+"\n");
         fv.incVersion();
@@ -61,6 +66,18 @@ public class Data {
         return d;
     }
 
+    public static void clean() {
+        if (pwds.size()<1) return;
+        modify = true;
+        oldPwds = pwds;
+        pwds = new ArrayList<Password>(10);
+    }
+
+    public static void reClean() {
+        if (oldPwds != null) {
+            pwds = oldPwds;
+        }
+    }
 
     public static void press(String str){
         if (null == str || str.trim().length()<1){

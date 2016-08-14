@@ -7,39 +7,34 @@ import com.aoki.savepw.Config;
  */
 public class Password extends Bean {
     public static char TYPE = '3';
-    private String desc;
-    private String context;
-    private String deDesc;
-//    private String id = ""+System.currentTimeMillis();
+    private String enDesc;
+    private String enContext;
 
     public void press(String str){
         String[] ss = str.split(":");
-        desc = ss[0];
-        context = ss[1];
-//        id=ss[0];
-        deDesc=Config.encryBean.de(desc);
-    }
-
-    public String data(){
-        return TYPE+":"+desc+":"+context;//+":"+id
+        enDesc = ss[0];
+        enContext = ss[1];
     }
 
     public String getContext() {
-        return context;
+        return Config.encryBean.de(enContext);
     }
 
     public void setContext(String context) {
         Data.modify = true;
-        this.context = context;
+        this.enContext = Config.encryBean.en(context);
     }
 
-    public String getDeDesc() {
-        return deDesc;
+    public String getDesc() {
+        return Config.encryBean.de(enDesc);
     }
 
-    public void setDeDesc(String deDesc) {
+    public void setDesc(String desc) {
         Data.modify = true;
-        this.desc = Config.encryBean.en(deDesc);
-        this.deDesc = deDesc;
+        this.enDesc = Config.encryBean.en(desc);
+    }
+
+    public String data(){
+        return TYPE+":"+enDesc+":"+enContext;
     }
 }

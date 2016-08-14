@@ -3,24 +3,37 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#6b6b6b"
+    android:background="@drawable/background_main"
     >
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#4b4b4b">
+
+        android:background="#546E7A">
         <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  添 加  "
             android:textSize="65px"
+            android:layout_marginRight="3dp"
             android:id="@+id/btViewAdd"
+            android:background="@drawable/background_button"
             />
         <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  保  存  "
             android:textSize="65px"
+            android:layout_marginRight="3dp"
             android:id="@+id/btViewSave"
+            android:background="@drawable/background_button"
+            />
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  数  据  "
+            android:textSize="65px"
+            android:layout_marginRight="3dp"
+            android:id="@+id/btBackup"
+            android:background="@drawable/background_button"
             />
     </LinearLayout>
     <LinearLayout

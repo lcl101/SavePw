@@ -16,6 +16,6 @@ public class FileVersion extends Bean{
     }
 
     public String data(){
-        return TYPE+":file_version:1";
+        return TYPE+":file_version:"+ver;
     }
 }

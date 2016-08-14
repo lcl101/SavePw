@@ -5,29 +5,17 @@
     android:layout_height="match_parent"
     android:weightSum="1">
     <TextView
-        android:id="@+id/tvDialogDesc"
+        android:id="@+id/tvDialogIp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="主   题" />
+        android:text="服务器ip" />
 
     <EditText
-        android:id="@+id/itDialogDesc"
+        android:id="@+id/itDialogIp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <requestFocus />
     </EditText>
-
-    <TextView
-        android:id="@+id/tvDialogContext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="内   容" />
-
-    <EditText
-        android:id="@+id/itDialogContext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.22" />
 
 </LinearLayout>
